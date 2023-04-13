@@ -1,0 +1,47 @@
+/* Colores de bootstrap */
+:root {
+	--clr-primary: #7f35ba;
+	--clr-secondary: #9f8ec7;
+	--clr-light: #dbcede;
+	--clr-dark: #221d25;
+}
+
+/* Para cargar la imagen especifica de cada seccion */
+#title-page-contact {
+	background-image: url(/assets/img/contact/header-contact.jpg);
+}
+
+.mb-80 {
+	margin-bottom: 80px;
+}
+.mt-80 {
+	margin-top: 80px;
+}
+
+#textAreaQuery {
+	height: 150px;
+}
+
+.icon {
+	height: 35px;
+	background-color: var(--clr-light);
+	padding: 5px;
+	border-radius: 5px;
+}
+/* GRADIENTE A TITULO */
+.gradient {
+	background: #8300ff;
+	background: linear-gradient(to right, #8300ff 0%, #db00ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Quitar flechas de subir y bajar al number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}

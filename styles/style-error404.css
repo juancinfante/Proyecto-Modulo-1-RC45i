@@ -1,0 +1,7 @@
+/* Colores de bootstrap */
+:root {
+	--clr-primary: #7f35ba;
+	--clr-secondary: #9f8ec7;
+	--clr-light: #dbcede;
+	--clr-dark: #221d25;
+}

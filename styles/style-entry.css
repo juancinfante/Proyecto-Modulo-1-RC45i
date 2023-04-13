@@ -1,0 +1,88 @@
+#textContainer {
+	width: 95%;
+}
+
+@media screen and (min-width: 576px) {
+	#textContainer {
+		width: 75%;
+	}
+}
+@media screen and (min-width: 992px) {
+	#textContainer {
+		width: 70%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	#textContainer {
+		width: 60%;
+	}
+}
+
+#textAreaQuery {
+	height: 150px;
+}
+
+/* Imagen autor circular */
+.rounded-circle {
+	object-fit: cover;
+	object-position: center;
+}
+
+/********** COMENTARIOS **********/
+
+.comentarios-container {
+	padding: 10px 20px;
+	color: var(--clr-light);
+	background-color: rgba(0, 0, 0, 0.308);
+}
+.total-com {
+	border-top: 2px solid var(--clr-primary);
+	border-bottom: 1px solid #dbcede;
+	padding: 10px 0;
+}
+
+.comentario-inner {
+	display: flex;
+	margin: 10px 0;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cccccc1e;
+}
+.comentario-inner img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	padding: 3px;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+.info-comentario p:nth-child(1) {
+	font-size: 1.1rem;
+}
+.info-comentario p:nth-child(2) {
+	font-size: 0.8rem;
+	color: grey;
+	margin-bottom: 10px;
+}
+.info-comentario p:nth-child(3) {
+	font-size: 1.1rem;
+	margin-bottom: 10px;
+}
+
+.comentar {
+	display: flex;
+	flex-wrap: wrap;
+}
+.comentar input:nth-child(1) {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 100px;
+}
+.comentar input:nth-child(2) {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#createComment button {
+	width: 50%;
+	margin: 0 auto;
+}

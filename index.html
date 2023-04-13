@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/styles/style-blog-entries.css" />
+	<link rel="stylesheet" href="/styles/bootstrap-configurado-font-poppis.css" />
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- end fontawesome -->
+	<link rel="stylesheet" href="/styles/style-carrussel.css" />
+	<link rel="stylesheet" href="/styles/style-background.css">
+	<link rel="stylesheet" href="/styles/style-navbar.css" />
+	<title>GameVibes</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body class="bg-dark">
+	<!-- NAV BAR -->
+	<header>
+		<!-- -- --//////--/////-- N A V B A R --/////--/////-- -- -->
+		<nav class="nav-vibes navbar navbar-expand-lg navbar-dark fixed-top" id="navvibes">
+			<script>
+				window.onscroll = () => {
+					const nav = document.querySelector('#navvibes');
+					if(this.scrollY <= 20) nav.className = 'nav-vibes navbar navbar-expand-lg navbar-dark fixed-top'; else nav.className = 'nav-vibes navbar navbar-expand-lg navbar-dark fixed-top scroll';
+				};
+			</script>
+			<!-- navbar logo -->
+			<div class="container-fluid">
+				<a class="navbar-brand justify-content-start" href="/index.html">
+					<img src="/assets/img/nav/game-vibes-22.png" alt="Logo Game Vibes"
+						class="align-middle mr-2 logo-gv">
+					<img src="/assets/img/nav/game-vibes-22-sm.png" alt="Logo Game Vibes"
+						class="align-middle mr-2 logo-mq-sm">
+				</a>
+				<!-- navbar buttons -->
+				<div class="collapse navbar-collapse align-center buttons-centrales" id="main-nav">
+					<div class="d-flex mq-col">
+						<a class="btn-st pulse fw-bold" type="button" href="/pages/login.html" data-bs-target="#"><span
+								class="button-content">Ingresar</span></a>
+						<button class="btn-st pulse fw-bold" type="button" data-bs-target="#ModalSuscripcion"
+							data-bs-toggle="modal"><span class="button-content">Suscribirse</span></button>
+						<a class="btn-st pulse fw-bold" type="button" href="/pages/contact.html"
+							data-bs-target="#"><span class="button-content">Contacto</span></a>
+						<a class="btn-st pulse fw-bold" type="button" href="/pages/about-us.html"
+							data-bs-target="#"><span class="button-content">Nosotros</span></a>
+					</div>
+				</div>
+				<!-- navbar burger mobile -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+					aria-controls="main-nav" aria-expanded="false" aria-label="toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- search and canvas buttons -->
+				<div>
+					<a class="btn btn-outline-primary btn-canvas btn-st pulse justify-content-end search-btn"
+						href="#search" role="button"><span class="t-right"><i
+								class="fa-solid fa-sharp fa-magnifying-glass fa-flip-horizontal fa-xl"
+								style="color: #9F8EC7;"></i></span></a>
+					<a class="btn btn-outline-primary btn-canvas btn-st pulse justify-content-end mq-1200"
+						href="#sidebar" data-bs-toggle="offcanvas" aria-controls="sidebar" role="button"><span
+							class="t-right"><i class="fa-solid fa-gamepad fa-shake fa-xl"
+								style="color: #9f8ec7;"></i></span></a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- END NAV BAR -->
+	<!-- -- --//////--/////-- M O D A L --/////--/////-- -- -->
+	<div class="modal fade" id="ModalSuscripcion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="modal-title" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modalstyle">
+				<div class="modal-header">
+					<h1 class="modal-title ms-3 fw-bold text-uppercase fs-5" id="modal-title">Mantenete informado:</h1>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form id="email-form" action="#" method="get">
+						<div class="input-group mt-1 mb-3 input-correo">
+							<span class="input-group-text bg-secondary border-primary text-bg-light"
+								id="email-input">@</span>
+							<input type="email" class="form-control bg-secondary border-primary text-bg-light"
+								id="mod-inp" placeholder="e.g. gamevibes@gmail.com" required minlength="10"
+								maxlength="35" aria-label="email" aria-describedby="email-input"
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+						</div>
+					</form>
+					<div class="modal-body-span mb-0 mx-1">Al colocar tu correo aquí comenzarás a recibir notificaciones
+						y actualizaciones sobre nosotros.<br>No te vas a arrepentir!</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-st pulse btn-primary mb-0" id="submit" form="email-form"><span
+							class="button-content">Suscribirse</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -- --//////--/////-- O F F - C A N V A S --/////--/////-- -- -->
+	<div class="offcanvas offcanvas-start bg-dark border-primary border-opacity-50 mq-1200" tabindex="-1" id="sidebar"
+		aria-labelledby="sidebar-label">
+		<div class="offcanvas-header">
+			<img src="/assets/img/nav/game-vibes-11.png" alt="Logo GameVibes Tetris" class="d-flex logo-cv"></img>
+		</div>
+		<div class="offcanvas-body text-bg-dark align-items-center justify-content-center mx-3">
+			<div class="text-bg-dark fw-bold offcanvas-title h4 text-center">
+				< <i class="fa-solid fa-dice-d6 fa-sm" style="color: #9f8ec7;"></i> > TETRIS ZONE < <i
+						class="fa-solid fa-ghost fa-sm" style="color: #9f8ec7;"></i> >
+			</div><br>
+			<!-- ////////////////////// !! TETRIS !! ///////////////////////// -->
+			<section class="canvas-tetris">
+				<canvas width="320" height="640" id="game"></canvas>
+				<script>
+					// https://tetris.fandom.com/wiki/Tetris_Guideline
+
+					// get a random integer between the range of [min,max]
+					// @see https://stackoverflow.com/a/1527820/2124254
+					function getRandomInt(min, max) {
+						min = Math.ceil(min);
+						max = Math.floor(max);
+
+						return Math.floor(Math.random() * (max - min + 1)) + min;
+					}
+
+					// generate a new tetromino sequence
+					// @see https://tetris.fandom.com/wiki/Random_Generator
+					function generateSequence() {
+						const sequence = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'];
+
+						while (sequence.length) {
+							const rand = getRandomInt(0, sequence.length - 1);
+							const name = sequence.splice(rand, 1)[0];
+							tetrominoSequence.push(name);
+						}
+					}
+
+					// get the next tetromino in the sequence
+					function getNextTetromino() {
+						if (tetrominoSequence.length === 0) {
+							generateSequence();
+						}
+
+						const name = tetrominoSequence.pop();
+						const matrix = tetrominos[name];
+
+						// I and O start centered, all others start in left-middle
+						const col = playfield[0].length / 2 - Math.ceil(matrix[0].length / 2);
+
+						// I starts on row 21 (-1), all others start on row 22 (-2)
+						const row = name === 'I' ? -1 : -2;
+
+						return {
+							name: name,      // name of the piece (L, O, etc.)
+							matrix: matrix,  // the current rotation matrix
+							row: row,        // current row (starts offscreen)
+							col: col         // current col
+						};
+					}
+
+					// rotate an NxN matrix 90deg
+					// @see https://codereview.stackexchange.com/a/186834
+					function rotate(matrix) {
+						const N = matrix.length - 1;
+						const result = matrix.map((row, i) =>
+							row.map((val, j) => matrix[N - j][i])
+						);
+
+						return result;
+					}
+
+					// check to see if the new matrix/row/col is valid
+					function isValidMove(matrix, cellRow, cellCol) {
+						for (let row = 0; row < matrix.length; row++) {
+							for (let col = 0; col < matrix[row].length; col++) {
+								if (matrix[row][col] && (
+									// outside the game bounds
+									cellCol + col < 0 ||
+									cellCol + col >= playfield[0].length ||
+									cellRow + row >= playfield.length ||
+									// collides with another piece
+									playfield[cellRow + row][cellCol + col])
+								) {
+									return false;
+								}
+							}
+						}
+
+						return true;
+					}
+
+					// place the tetromino on the playfield
+					function placeTetromino() {
+						for (let row = 0; row < tetromino.matrix.length; row++) {
+							for (let col = 0; col < tetromino.matrix[row].length; col++) {
+								if (tetromino.matrix[row][col]) {
+
+									// game over if piece has any part offscreen
+									if (tetromino.row + row < 0) {
+										return showGameOver();
+									}
+
+									playfield[tetromino.row + row][tetromino.col + col] = tetromino.name;
+								}
+							}
+						}
+
+						// check for line clears starting from the bottom and working our way up
+						for (let row = playfield.length - 1; row >= 0;) {
+							if (playfield[row].every(cell => !!cell)) {
+
+								// drop every row above this one
+								for (let r = row; r >= 0; r--) {
+									for (let c = 0; c < playfield[r].length; c++) {
+										playfield[r][c] = playfield[r - 1][c];
+									}
+								}
+							}
+							else {
+								row--;
+							}
+						}
+
+						tetromino = getNextTetromino();
+					}
+
+					// show the game over screen
+					function showGameOver() {
+						cancelAnimationFrame(rAF);
+						gameOver = true;
+
+						context.fillStyle = 'black';
+						context.globalAlpha = 0.75;
+						context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+
+						context.globalAlpha = 1;
+						context.fillStyle = 'white';
+						context.font = '36px monospace';
+						context.textAlign = 'center';
+						context.textBaseline = 'middle';
+						context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+					}
+
+					const canvas = document.getElementById('game');
+					const context = canvas.getContext('2d');
+					const grid = 32;
+					const tetrominoSequence = [];
+
+					// keep track of what is in every cell of the game using a 2d array
+					// tetris playfield is 10x20, with a few rows offscreen
+					const playfield = [];
+
+					// populate the empty state
+					for (let row = -2; row < 20; row++) {
+						playfield[row] = [];
+
+						for (let col = 0; col < 10; col++) {
+							playfield[row][col] = 0;
+						}
+					}
+
+					// how to draw each tetromino
+					// @see https://tetris.fandom.com/wiki/SRS
+					const tetrominos = {
+						'I': [
+							[0, 0, 0, 0],
+							[1, 1, 1, 1],
+							[0, 0, 0, 0],
+							[0, 0, 0, 0]
+						],
+						'J': [
+							[1, 0, 0],
+							[1, 1, 1],
+							[0, 0, 0],
+						],
+						'L': [
+							[0, 0, 1],
+							[1, 1, 1],
+							[0, 0, 0],
+						],
+						'O': [
+							[1, 1],
+							[1, 1],
+						],
+						'S': [
+							[0, 1, 1],
+							[1, 1, 0],
+							[0, 0, 0],
+						],
+						'Z': [
+							[1, 1, 0],
+							[0, 1, 1],
+							[0, 0, 0],
+						],
+						'T': [
+							[0, 1, 0],
+							[1, 1, 1],
+							[0, 0, 0],
+						]
+					};
+
+					// color of each tetromino
+					const colors = {
+						'I': 'cyan',
+						'O': 'yellow',
+						'T': 'purple',
+						'S': 'green',
+						'Z': 'red',
+						'J': 'blue',
+						'L': 'orange'
+					};
+
+					let count = 0;
+					let tetromino = getNextTetromino();
+					let rAF = null;  // keep track of the animation frame so we can cancel it
+					let gameOver = false;
+
+					// game loop
+					function loop() {
+						rAF = requestAnimationFrame(loop);
+						context.clearRect(0, 0, canvas.width, canvas.height);
+
+						// draw the playfield
+						for (let row = 0; row < 20; row++) {
+							for (let col = 0; col < 10; col++) {
+								if (playfield[row][col]) {
+									const name = playfield[row][col];
+									context.fillStyle = colors[name];
+
+									// drawing 1 px smaller than the grid creates a grid effect
+									context.fillRect(col * grid, row * grid, grid - 1, grid - 1);
+								}
+							}
+						}
+
+						// draw the active tetromino
+						if (tetromino) {
+
+							// tetromino falls every 35 frames
+							if (++count > 35) {
+								tetromino.row++;
+								count = 0;
+
+								// place piece if it runs into anything
+								if (!isValidMove(tetromino.matrix, tetromino.row, tetromino.col)) {
+									tetromino.row--;
+									placeTetromino();
+								}
+							}
+
+							context.fillStyle = colors[tetromino.name];
+
+							for (let row = 0; row < tetromino.matrix.length; row++) {
+								for (let col = 0; col < tetromino.matrix[row].length; col++) {
+									if (tetromino.matrix[row][col]) {
+
+										// drawing 1 px smaller than the grid creates a grid effect
+										context.fillRect((tetromino.col + col) * grid, (tetromino.row + row) * grid, grid - 1, grid - 1);
+									}
+								}
+							}
+						}
+					}
+
+					// listen to keyboard events to move the active tetromino
+					document.addEventListener('keydown', function (e) {
+						if (gameOver) return;
+
+						// left and right arrow keys (move)
+						if (e.which === 37 || e.which === 39) {
+							const col = e.which === 37
+								? tetromino.col - 1
+								: tetromino.col + 1;
+
+							if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+								tetromino.col = col;
+							}
+						}
+
+						// up arrow key (rotate)
+						if (e.which === 38) {
+							const matrix = rotate(tetromino.matrix);
+							if (isValidMove(matrix, tetromino.row, tetromino.col)) {
+								tetromino.matrix = matrix;
+							}
+						}
+
+						// down arrow key (drop)
+						if (e.which === 40) {
+							const row = tetromino.row + 1;
+
+							if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
+								tetromino.row = row - 1;
+
+								placeTetromino();
+								return;
+							}
+
+							tetromino.row = row;
+						}
+					});
+
+					// start the game
+					rAF = requestAnimationFrame(loop);
+				</script>
+			</section>
+			<div class="text-bg-dark text-center font-monospace canvas-txt">
+				Éste simple juego fue un éxito indiscutible desde su nacimiento en 1984.
+				Un clásico que, por qué no, podes disfrutar en su versión más simple aquí, en GameVibes!
+			</div>
+			<!-- ////// --- REDES --- ////// -->
+				<div class="redes-canvas">
+					<ul id="ul-r">
+						<li><a href="https://www.instagram.com/" target="_blank"><i
+									class="fa-brands fa-instagram instagram"></i></a></li>
+						<li><a href="https://web.whatsapp.com/" target="_blank"><i
+									class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+						<li><a href="https://www.twitter.com/" target="_blank"><i
+									class="fa-brands fa-twitter twitter"></i></a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+
+	<!-- CARRUSEL -->
+	<div id="carruselPrincipalItem" class="carruselPrincipalItem carousel slide">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carruselPrincipalItem" data-bs-slide-to="0" class="active"
+				aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carruselPrincipalItem" data-bs-slide-to="1"
+				aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carruselPrincipalItem" data-bs-slide-to="2"
+				aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<!-- 1er Item carrusel -->
+			<div data-bs-interval="10000" class="carruselPrincipalItem carousel-item active position-relative">
+				<!-- Imagen de fondo -->
+				<img src="/assets/img/main-carrussel/resident-evil-4.jpeg" class="img-fluid d-block w-100" alt="Resident Evil 4" />
+				<div
+					class="carousel-caption d-flex flex-column justify-content-center position-absolute top-50 translate-middle-y text-start">
+					<div class="row">
+						<div class="col-12 col-lg-10 text-center text-sm-start">
+							<h4 class="mb-3">
+								<span class="badge bg-secondary">RESIDENT EVIL</span>
+							</h4>
+							<p class="lead d-none d-md-block">
+								Miercoles 15 de Marzo del 2023
+							</p>
+							<h2 class="display-5 fw-bold mb-4 mb-md-2">
+								El lavado de cara de 'Resident Evil 4 Remake' me ha hecho
+								entender por qué las nuevas versiones de la saga funcionan tan
+								bien
+							</h2>
+							<p class="lead d-none d-md-block mb-2">
+								De todos los remakes con los que Capcom lleva años recuperando
+								los clásicos de su saga de survival horrors, 'Resident Evil 4'
+								es el que más sorprendido me tiene.
+							</p>
+							<a class="btn btn-secondary text-white"
+							href="/pages/error-404.html">
+								Ir al artículo
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END - 1er Item carrusel -->
+
+			<!-- 2do Item carrusel -->
+			<div class="carruselPrincipalItem carousel-item position-relative">
+				<!-- Imagen de fondo -->
+				<img src="/assets/img/main-carrussel/steam.jpeg" class="img-fluid d-block w-100" alt="Steam" />
+				<div
+					class="carousel-caption d-flex flex-column justify-content-center position-absolute top-50 translate-middle-y text-start">
+					<div class="row">
+						<div class="col-12 col-lg-10 text-center text-sm-start">
+							<h4 class="mb-3">
+								<span class="badge bg-secondary">STEAM</span>
+							</h4>
+							<p class="lead d-none d-md-block">
+								Miercoles 15 de Marzo del 2023
+							</p>
+							<h2 class="display-5 fw-bold mb-4 mb-md-2">
+								"Es un verdadero problema para la industria": Epic Games
+								define duramente la estrategia de Steam
+							</h2>
+							<p class="lead d-none d-md-block mb-2">
+								Steam y Epic Games siempre han estado enfrentadas. Son las dos
+								tiendas de juegos de ordenador más importantes de la
+								industria, aunque tradicionalmente la veterana plataforma de
+								Valve (veinte años lleva ya en el ajo) es la que se lleva la
+								mayor parte del pastel.
+							</p>
+							<a class="btn btn-secondary text-white"
+							href="/pages/error-404.html">
+								Ir al artículo
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END - 2do Item carrusel -->
+
+			<!-- 3er Item carrusel -->
+			<div class="carruselPrincipalItem carousel-item position-relative">
+				<!-- Imagen de fondo -->
+				<img src="/assets/img/main-carrussel/dragon-ball.jpeg" class="img-fluid d-block w-100" alt="Dragon Ball" />
+				<div
+					class="carousel-caption d-flex flex-column justify-content-center position-absolute top-50 translate-middle-y text-start">
+					<div class="row">
+						<div class="col-12 col-lg-10 text-center text-sm-start">
+							<h4 class="mb-3">
+								<span class="badge bg-secondary">DRAGON BALL</span>
+							</h4>
+							<p class="lead d-none d-md-block">
+								Miercoles 15 de Marzo del 2023
+							</p>
+							<h2 class="display-5 fw-bold mb-4 mb-md-2">
+								'Dragon Ball Z: Budokai Tenkaichi 4' es una realidad: su
+								primer teaser nos devuelve a los mejores juegos de la saga
+							</h2>
+							<p class="lead d-none d-md-block mb-2">
+								15 años han pasado desde que 'Dragon Ball Z: Budokai
+								Tenkaichi' se convirtiera en la que quizás es la serie de
+								videojuegos más querida de todos los que se inspiraron en la
+								franquicia creada por Akira Toriyama.
+							</p>
+							<a class="btn btn-secondary text-white" 
+							href="/pages/error-404.html">
+								Ir al artículo
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END - 3er Item carrusel -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#carruselPrincipalItem"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipalItem"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	<!-- END CARRUSEL -->
+
+	<!--------- PAGINA PRINCIPAL ENTRADAS ---------->
+
+	<div class="container-lg">
+
+			<h3 class="border border-3 border-primary gradient display-5 text-white mt-3 mb-3 fw-bold p-3">
+				Ultimas noticias
+			</h3>
+
+
+		<div class="row">
+			<div class="col-xl-8">
+				<!-------- ENTRADAS BLOG  -------->
+				<div id="entradasBlog" class="row gy-4">
+					<!-- Entrada 1 - counter -->
+					<div class="col-12 col-md-6">
+						<div class="card h-100 border border-2 border-secondary bg-dark text-light rounded-0">
+							<img src="/assets/img/img-entradas-carrussel/entrada1.jpeg" class="rounded-0 card-img-top img-fluid"
+								alt="Counter strike image" />
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5>
+									<span class="badge bg-secondary">GAMING</span>
+								</h5>
+								<h5 class="card-title fw-bold">
+									Es un cambio ridículo pero necesario: El nuevo
+									Counter-Strike debe acabar con una tradición
+								</h5>
+								<p class="card-text">
+									Si hay una nueva versión de Counter-Strike en camino, Valve
+									debería pensar en un pequeño sacrificio.
+								</p>
+								<p class="fs-6 text-muted">
+									<small>ABRIL FARFAN - HACE 1 HORA</small>
+								</p>
+								<div>
+									<a href="/pages/entry-1.html" class="btn btn-primary">Seguir leyendo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Entrada 2 - wo long -->
+					<div class="col-12 col-md-6">
+						<div class="card h-100 border-secondary bg-dark text-light border border-2 rounded-0">
+							<img src="/assets/img/img-entradas-carrussel/entrada2.jpeg" class="card-img-top img-fluid rounded-0"
+								alt="Fallen Dynasty img" />
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5>
+									<span class="badge bg-secondary">GAMING</span>
+								</h5>
+								<h5 class="card-title fw-bold">
+									Wo Long: Fallen Dynasty lanza una actualización para
+									solucionar errores en todas sus plataformas.
+								</h5>
+								<p class="card-text">
+									El nuevo título de Team Ninja ha recibido muchas
+									valoraciones negativas en Steam debido a problemas de
+									rendimiento en PC.
+								</p>
+								<p class="fs-6 text-muted">
+									<small>AGUSTIN RUBIO - HACE 2 HORAS</small>
+								</p>
+								<div>
+									<a href="/pages/entry-2.html" class="btn btn-primary">Seguir leyendo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Entrada 3 - Invertir millones -->
+					<div class="col-12 col-md-6">
+						<div class="card h-100 border border-2 border-secondary bg-dark text-light rounded-0">
+							<img src="/assets/img/img-entradas-carrussel/entrada4.jpeg" class="card-img-top img-fluid rounded-0"
+								alt="Fortnite img" />
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5>
+									<span class="badge bg-secondary">EMPRESAS Y ECONOMIA</span>
+								</h5>
+								<h5 class="card-title fw-bold">
+									¿Qué se obtiene de invertir millones de dólares en juegos gratis?
+								</h5>
+								<p class="card-text">
+									La compañía detrás de Fortnite no solo atrae nuevos
+									jugadores con sus regalos, sino que también beneficia a
+									desarrolladores.
+								</p>
+								<p class="fs-6 text-muted">
+									<small>DARIO MANSILLA - HACE 3 HORAS</small>
+								</p>
+								<div>
+									<a href="/pages/entry-3.html" class="btn btn-primary">Seguir leyendo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Entrada 4 - Silent Hill -->
+					<div class="col-12 col-md-6">
+						<div class="card h-100 border border-2 rounded-0 border-secondary bg-dark text-light">
+							<img src="/assets/img/img-entradas-carrussel/entrada5.jpeg" class="card-img-top rounded-0 img-fluid"
+								alt="Silent Hill img" />
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5>
+									<span class="badge bg-secondary">LANZAMIENTOS</span>
+								</h5>
+								<h5 class="card-title fw-bold">
+									Silent Hill 2 Remake preocupa a los fans por la filosofía de sus creadores.
+								</h5>
+								<p class="card-text">
+									Además, Piotr Babieno, CEO de Bloober Team, insta a los jugadores a confiar en las
+									decisiones de Konami.
+								</p>
+								<p class="fs-6 text-muted">
+									<small>AGUSTIN RUBIO - HACE 4 HORAS</small>
+								</p>
+								<div>
+									<a href="/pages/entry-4.html" class="btn btn-primary">Seguir leyendo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Entrada 5 - Yoshi -->
+					<div class="col-12 col-md-6">
+						<div class="card h-100 border border-2 border-secondary bg-dark text-light rounded-0">
+							<img src="/assets/img/img-entradas-carrussel/entrada6.jpeg" class="rounded-0 card-img-top img-fluid"
+								alt="Yoshi's Island img" />
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5>
+									<span class="badge bg-secondary">EPIC GAMES</span>
+								</h5>
+								<h5 class="card-title fw-bold">
+									Tienes que ver el nuevo circuito de Yoshi's Island en Mario Kart 8 Deluxe.
+								</h5>
+								<p class="card-text">
+									La cuarta oleada de nuevas pistas vía DLC de MK8 Deluxe trae a Birdo y nuevas
+									pistas.
+								</p>
+								<p class="fs-6 text-muted">
+									<small>JUAN CRUZ INFANTE - HACE 7 HORAS</small>
+								</p>
+								<div>
+									<a href="/pages/entry-5.html" class="btn btn-primary">Seguir leyendo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Entrada 6 - Hollywood -->
+					<div class="col-12 col-md-6">
+						<div class="card h-100 border-secondary bg-dark text-light border border-2 rounded-0">
+							<img src="/assets/img/img-entradas-carrussel/entrada7.jpeg" class="card-img-top rounded-0 img-fluid"
+								alt="Crime Boss Rockay City img" />
+							<div class="card-body d-flex flex-column justify-content-between">
+								<h5>
+									<span class="badge bg-secondary">EPIC GAMES</span>
+								</h5>
+								<h5 class="card-title fw-bold">
+									El nuevo shooter con viejas glorias de Hollywood como Chuck Norris, Crime Boss.
+								</h5>
+								<p class="card-text">
+									Llegará primero como exclusivo de Epic Games Store en PC el 28 de marzo.
+								</p>
+								<p class="fs-6 text-muted">
+									<small>MATIAS LEAL - HACE 1 HORAS</small>
+								</p>
+								<div>
+									<a href="/pages/entry-6.html" class="btn btn-primary">Seguir leyendo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!------- FIN ENTRADAS BLOG ------->
+			<!-------- ASIDE  -------->
+			<div class="col-xl-4">
+				<aside class="bg-dark p-3 my-4 my-xl-0">
+					<div class="aside-container">
+						<!-- Search de aside -->
+						<form class="d-flex" role="search" action="/pages/error-404-b.html">
+							<input class="form-control me-2" id="search" type="search" placeholder="Buscar articulos"
+								aria-label="Search" required minlength="2"/>
+							<button class="btn btn-outline-secondary" type="submit">
+								Buscar
+							</button>
+						</form>
+						<!-- Listado de categorias -->
+						<div class="categorias pt-4">
+							<h4 class="text-white bg-secondary p-2">CATEGORIAS</h4>
+							<div class="d-flex align-items-center gap-2 border-bottom pb-2 lead">
+								<i class="fa-solid fa-angle-double-right fs-3 text-secondary p-1 rounded"></i>
+								<a class="text-decoration-none text-light" href="/pages/gallery.html#new-g">Nuevos Lanzamientos</a>
+							</div>
+							<div class="d-flex align-items-center gap-2 border-bottom py-2 lead">
+								<i class="fa-solid fa-angle-double-right fs-3 text-secondary p-1 rounded"></i>
+								<a class="text-decoration-none text-light" href="/pages/gallery.html#more-g">Los más jugados</a>
+							</div>
+							<div class="d-flex align-items-center gap-2 border-bottom py-2 lead">
+								<i class="fa-solid fa-angle-double-right fs-3 text-secondary p-1 rounded"></i>
+								<a class="text-decoration-none text-light" href="/pages/gallery.html#mob-g">Mobile</a>
+							</div>
+						</div>
+
+						<!------- CAROUSEL ASIDE ------->
+
+						<div class="d-none d-xl-flex justify-content-center align-items-center py-4">
+							<div id="carouselAds" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="/assets/img/img-entradas-carrussel/ad1.jpg" class="d-block w-100 img-fluid"
+											alt="Publicidad1" />
+									</div>
+									<div class="carousel-item">
+										<img src="/assets/img/img-entradas-carrussel/ad2.jpg" class="d-block w-100 img-fluid"
+											alt="Publicidad2" />
+									</div>
+									<div class="carousel-item">
+										<img src="/assets/img/img-entradas-carrussel/ad3.jpg" class="d-block w-100 img-fluid"
+											alt="Publicidad3" />
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<!-------- FIN ASIDE  -------->
+		</div>
+
+		<!------- PAGINATION ------->
+
+		<div class="my-4 d-flex justify-content-center">
+			<nav aria-label="Navegacion" class="paginas bg-dark text-bg-dark">
+				<ul class="pagination">
+					<li class="page-item disabled">
+						<a class="page-link" href="#" aria-label="Previous">
+							<span class="d-none d-md-block" aria-hidden="true">&laquo; Anterior</span>
+							<span class="d-md-none" aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="/pages/error-404-b.html">2</a></li>
+					<li class="page-item"><a class="page-link" href="/pages/error-404-b.html">3</a></li>
+					<li class="page-item">
+						<a class="page-link" href="/pages/error-404-b.html" aria-label="Next">
+							<span class="d-none d-md-block" aria-hidden="true">Siguiente &raquo;</span>
+							<span class="d-md-none" aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-------- FIN PAGINATION  -------->
+	</div>
+
+	<!-------- FOOTER  -------->
+	<footer class="footer-bg d-flex flex-column bg-dark">
+		<div class="order-5 text-light text-center border-top border-secondary py-2">
+			<small>&#169; 2023 devST ARG - Todos los derechos reservados</small>
+		</div>
+		<div class="container-lg">
+			<div class="row g-4 align-items-center py-2 my-3">
+				<!-- Logo en footer -->
+				<div class="col-12 col-md-4 my-auto pb-3">
+					<div class="img-footer d-flex justify-content-center">
+						<img src="/assets/img/nav/game-vibes-11.png" alt="Logo Game Vibes footer" width="250px" />
+					</div>
+				</div>
+				<!-- Social icons -->
+				<div class="col-12 col-md-4 my-auto pb-3">
+					<div class="d-flex gap-2 justify-content-center">
+
+						<a href="/pages/error-404.html" target="_blank" class="btn-st btn btn-primary shadow">
+							<i class="button-content fa-brands fa-facebook fa-lg"></i>
+						</a>
+						<a href="/pages/error-404.html" target="_blank" class="btn-st btn btn-primary shadow">
+							<i class="button-content fa-brands fa-twitter fa-lg"></i>
+						</a>
+						<a href="/pages/error-404.html" target="_blank" class="btn-st btn btn-primary shadow">
+							<i class="button-content fa-brands fa-youtube fa-lg"></i>
+						</a>
+					</div>
+				</div>
+				<!-- Text footer -->
+				<div class="col-12 col-md-4 my-auto">
+					<div class="text-footer text-center">
+						¡La mayor comunidad de apasionados por los videojuegos también
+						está en Latinoamérica!
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-------- FIN FOOTER  -------->
+
+	<!-- FIN PAGINA PRINCIPAL -->
+
+	<!-- ----------//----------//---------- SCRIPT FONT AWESOME ----------//----------//---------- -->
+	<script src="https://kit.fontawesome.com/070b77af1b.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<!-- Script de la libreria de animaciones "AOS" -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- Ejecutar el script -->
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>

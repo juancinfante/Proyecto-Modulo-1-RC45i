@@ -1,0 +1,39 @@
+/* Colores de bootstrap */
+:root {
+	--clr-primary: #7f35ba;
+	--clr-secondary: #9f8ec7;
+	--clr-light: #dbcede;
+	--clr-dark: #221d25;
+}
+
+.mb-80 {
+	margin-bottom: 80px;
+}
+.mt-80 {
+	margin-top: 80px;
+}
+
+.carruselPrincipalItem > img {
+	max-height: 100vh;
+	min-height: 100vh;
+	object-fit: cover;
+	object-position: center;
+	position: relative;
+	filter: brightness(0.3);
+	animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+	-webkit-animation: thing 30s;
+	-o-animation: thing 30s;
+	animation: thing 30s infinite;
+}
+
+@keyframes thing {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(1.5, 1.5);
+	}
+	0% {
+		transform: scale(1, 1);
+	}
+}

@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-primary: #7f35ba;
+	--clr-secondary: #9f8ec7;
+	--clr-light: #dbcede;
+	--clr-dark: #221d25;
+}
+
+/* Para cargar la imagen especifica de cada seccion */
+#title-page-contact {
+	background-image: url(/assets/img/login/header-login.png);
+}
+
+.bg {
+	background-image: url(/assets/img/login/fondo.png);
+	background-size: cover;
+	filter: hue-rotate(33deg);
+	background-position-y: -60px;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.bg {
+		background-position: 0;
+	}   
+}
+
+.btn-bg {
+	background-color: #9f8ec7;
+}
+
+.btn-bg:hover {
+	background-color: var(--clr-primary);
+	color: var(--clr-light);
+}
+
+.tce {
+	color: var(--clr-secondary);
+}

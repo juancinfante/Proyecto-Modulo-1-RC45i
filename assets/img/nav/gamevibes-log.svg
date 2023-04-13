@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="svg666604" viewBox="210.772 320.614 579.37 158.007" height="768px" width="1024px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs id="defs666608">
+    <bx:grid x="263.442" y="373.283" width="52.67" height="52.669"/>
+  </defs>
+  <g id="logo-group" transform="matrix(1, 0, 0, 1, -17.860466, 15.181396)">
+    <image id="container" x="272" y="144" width="480" height="480" style="display: none;" transform="translate(0 0)" xlink:href=""/>
+    <g id="logo-center" transform="translate(0 0)">
+      <image id="icon_container" style="display: none;" x="0" y="0" xlink:href=""/>
+      <g id="slogan" style="font-style:normal;font-weight:400;font-size:32px;line-height:1;font-family:'PT Sans Caption';font-variant-ligatures:none;text-align:center;text-anchor:middle" transform="translate(0 0)"/>
+      <g id="title" style="font-style:normal;font-weight:normal;font-size:72px;line-height:1;font-family:'Brandmark Sans 1 Color';font-variant-ligatures:normal;text-align:center;text-anchor:middle" transform="translate(0 0)">
+        <g id="path666613" aria-label="G" transform="translate(0 311.77302809500003) translate(281.75746189999995 44.71141778) scale(1.11) translate(-305.62177 48.678002)">
+          <path class="c1" d="M98.97184,95.92001h24.0498v16.70557c-0.52734,0.95996-1.19922,1.87207-1.87207,2.73633 c-5.56836,7.05713-14.68848,10.60889-23.56934,9.16846c-8.59277-1.43945-16.03418-7.44043-19.1543-15.55322 c-3.16797-8.2085-1.67969-17.76172,3.88867-24.62598c5.4248-6.7207,14.11328-10.12891,22.6582-8.97705 c7.68066,1.05615,14.35254,5.7124,18.24121,12.38525l-10.27246,5.04053c-2.54492-4.08057-7.24902-6.48096-12.0498-6.24072 c-4.17578,0.19189-8.1123,2.44824-10.41602,5.90479c-2.68848,3.98389-3.02441,9.26465-0.81641,13.53711 c1.96777,3.84033,5.76074,6.57617,10.0332,7.20068c4.41602,0.67188,8.97656-1.0083,11.95215-4.36865v-2.92822H98.97184V95.92001z" transform="translate(228.835813 -123.831324)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666615" aria-label="A" transform="translate(0 311.77302809500003) translate(340.6607662999999 45.51728) scale(1.11) translate(-358.68781 47.952)">
+          <polygon class="c1" points="106.43262,75.9978 93.61523,75.9978 75.03809,124.0022 87.95117,124.0022 100.04785,89.58276 106.09747,106.8645 106.09747,106.8645 112.09668,124.0022 124.96191,124.0022 " transform="translate(283.64972 -123.9498)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+          <polygon class="c3" points="100.03257,124.0022 92.40832,112.19891 107.59168,112.19891 " transform="translate(283.64972 -123.9498)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#dbcede" stroke="#dbcede"/>
+        </g>
+        <g id="path666617" aria-label="M" transform="translate(0 311.77302809500003) translate(404.0348287999999 45.51728) scale(1.11) translate(-415.78156 47.952)">
+          <path class="c1" d="M126.01807,75.99805v48.00391h-11.4248V96.35156l-11.13672,27.65039h-6.96094L85.35889,96.35156v27.65039 H73.98193V75.99805h14.30469l11.66504,28.99414l11.66504-28.99414H126.01807z" transform="translate(341.79963 -123.95005)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666619" aria-label="^E" transform="translate(0 311.77302809500003) translate(469.75030309999994 45.51728) scale(1.11) translate(-474.98469 47.952)">
+          <rect x="83.00684" y="75.99805" class="c3" width="33.98633" height="10.12891" transform="translate(391.97785 -123.950047)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#dbcede" stroke="#dbcede"/>
+          <polygon class="c1" points="116.99316,113.87305 116.99316,124.00195 83.00684,124.00195 83.00684,95.15137 116.46582,95.15137 116.46582,105.28027 94.38379,105.28027 94.38379,113.87305 " transform="translate(391.97785 -123.950047)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666621" aria-label="V" transform="translate(0 311.77302809500003) translate(515.4857663 45.51728) scale(1.11) translate(-516.18781 47.952)">
+          <path class="c1" d="M124.96216,75.9978l-18.5293,48.00439H93.61548L75.03784,75.9978h12.91357l12.09668,33.50635 l12.00098-33.50635H124.96216z" transform="translate(441.14997 -123.9498)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666623" aria-label="I" transform="translate(0 311.77302809500003) translate(578.8598288000001 45.51728) scale(1.11) translate(-573.28156 47.952)">
+          <path class="c1" d="M94.31152,75.99805h11.37695v48.00391H94.31152V75.99805z" transform="translate(478.97004 -123.95005)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666625" aria-label="B" transform="translate(0 311.77302809500003) translate(599.4642038000001 45.43735999999999) scale(1.11) translate(-591.84406 48.024)">
+          <path class="c1" d="M120.01758,111.06519c0,7.20117-4.84863,12.96094-13.96875,12.96094H79.98242V75.97388h25.29785 c9.12109,0,13.8252,5.85645,13.8252,12.24121c0,6.04834-3.79199,10.08105-8.30469,11.04102 C115.88965,100.07202,120.01758,105.01636,120.01758,111.06519z M91.35938,94.07153h11.66504 c2.6875,0,4.46387-1.58398,4.46387-4.03223s-1.77637-4.08057-4.46387-4.08057H91.35938V94.07153z M108.40039,109.62476 c0-2.68799-1.96777-4.46436-5.04004-4.46436H91.35938v8.88086h12.00098 C105.28027,114.04126,108.40039,113.46509,108.40039,109.62476z" transform="translate(511.86164 -123.99788)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666627" aria-label="^E" transform="translate(0 311.77302809500003) translate(651.9117038 45.51728) scale(1.11) translate(-639.09406 47.952)">
+          <rect x="83.00684" y="75.99805" class="c3" width="33.98633" height="10.12891" transform="translate(556.08722 -123.950047)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#dbcede" stroke="#dbcede"/>
+          <polygon class="c1" points="116.99316,113.87305 116.99316,124.00195 83.00684,124.00195 83.00684,95.15137 116.46582,95.15137 116.46582,105.28027 94.38379,105.28027 94.38379,113.87305 " transform="translate(556.08722 -123.950047)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+        <g id="path666629" aria-label="S" transform="translate(0 311.77302809500003) translate(697.6471781 44.63815999999999) scale(1.11) translate(-680.29719 48.744)">
+          <path class="c1" d="M120.11401,109.43286c0,8.78516-6.24121,15.40918-19.20215,15.40918 c-9.2168,0-15.64941-3.16797-21.02588-8.59277l6.14502-8.64063l0.95996,1.00879c2.20801,2.30371,7.00879,6.14453,14.44922,6.14453 c4.99219,0,7.2002-2.1123,7.2002-4.17676c0-2.54395-4.22363-3.55273-9.12012-4.7041 c-7.63281-1.82422-16.9458-4.27246-17.37793-15.21777v-0.43164v-0.43213v-0.43213 c0.24023-7.82471,7.10449-14.20947,18.19336-14.20947c7.63281,0,14.25781,2.3042,19.58594,7.44092l-6.43262,8.44873 l-0.91211-0.86426c-3.4082-3.12012-8.20898-4.94434-13.20117-4.94434c-3.55176,0-5.66406,1.34424-5.66406,3.64844 c0,2.11182,3.98438,3.07227,8.59277,4.17627c7.82422,1.87207,17.37695,4.41602,17.80957,15.45703v0.43262V109.43286z" transform="translate(600.41121 -123.90196)" stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#7f35ba" stroke="#7f35ba"/>
+        </g>
+      </g>
+      <image id="icon" style="display: none;" x="0" y="0" xlink:href="https://app.brandmark.io/nounpreview/4674083.png"/>
+    </g>
+  </g>
+</svg>

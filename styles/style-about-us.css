@@ -1,0 +1,171 @@
+/* Colores de bootstrap */
+:root {
+	--clr-primary: #7f35ba;
+	--clr-secondary: #9f8ec7;
+	--clr-light: #dbcede;
+	--clr-dark: #221d25;
+}
+
+/* Para cargar la imagen especifica de cada seccion */
+#title-page-contact {
+	background-image: url(/assets/img/about-us/header-about-us.jpg);
+}
+
+/* Aplicacion de una imagen de fondo a cada card */
+.card {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+}
+
+/* Hover efecto scale en imagen de portada */
+.card:hover .img-perfil {
+	transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transform: scale(1.1);
+}
+
+/* Seleccion de imagenes de fondo de las cards para cada una */
+#card-1 {
+	background-image: url(/assets/img/about-us/abril-bg.webp);
+}
+#card-2 {
+	background-image: url(/assets/img/about-us/agustin-bg.jpg);
+}
+#card-3 {
+	background-image: url(/assets/img/about-us/dario-bg.jpg);
+}
+#card-4 {
+	background-image: url(/assets/img/about-us/juan-bg.jpg);
+}
+#card-5 {
+	background-image: url(/assets/img/about-us/matias-bg.webp);
+}
+/* Imagen de perfil circular */
+.img-perfil {
+	max-width: 275px;
+	max-height: 275px;
+	object-fit: cover;
+	object-position: center;
+	align-self: center;
+}
+/* Aplicacion de un degreade encima de la imagen de fondo de cada carta */
+.card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		225deg,
+		rgba(3, 3, 3, 0.4) 0%,
+		hsla(278, 12%, 13%, 0.808) 90%
+	);
+	z-index: -2;
+}
+/* clase */
+.btn-st {
+	/* 33deg a los botones */
+	-ms-transform: skewX(-33deg);
+	-webkit-transform: skewX(-33deg);
+	transform: skewX(-33deg);
+	border-radius: 0;
+}
+
+.button-content {
+	/* 13deg a las letras */
+	-ms-transform: skewX(33deg);
+	-webkit-transform: skewX(33deg);
+	transform: skewX(33deg);
+	display: inline-block;
+}
+
+.fondo-inclinado {
+	position: relative;
+	padding: 0 8px;
+}
+
+.fondo-inclinado::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--clr-primary);
+	z-index: -1;
+	-ms-transform: skewX(-33deg);
+	-webkit-transform: skewX(-33deg);
+	transform: skewX(-33deg);
+	border-radius: 0;
+}
+/* Funcion para darle la forma de paralelogramo a las cards y fotos de perfil */
+.card {
+	--angle: 33deg;
+	--long: 20vw;
+	--left-t: calc(var(--long) * sin(var(--angle)));
+	--left-b: calc(var(--long) * cos(var(--angle)));
+	--right-b: calc(100% - var(--left-t));
+	--right-t: calc(100% - var(--left-b));
+	-webkit-clip-path: polygon(
+		var(--left-t) 0,
+		100% 0,
+		100% var(--right-t),
+		var(--right-b) 100%,
+		0 100%,
+		0 var(--left-b)
+	);
+	clip-path: polygon(
+		var(--left-t) 0,
+		100% 0,
+		100% var(--right-t),
+		var(--right-b) 100%,
+		0 100%,
+		0 var(--left-b)
+	);
+}
+
+.img-perfil {
+	--angle: 33deg;
+	--long: 25%;
+	--left-t: calc(var(--long) * sin(var(--angle)));
+	--left-b: calc(var(--long) * cos(var(--angle)));
+	--right-b: calc(100% - var(--left-t));
+	--right-t: calc(100% - var(--left-b));
+	-webkit-clip-path: polygon(
+		var(--left-t) 0,
+		100% 0,
+		100% var(--right-t),
+		var(--right-b) 100%,
+		0 100%,
+		0 var(--left-b)
+	);
+	clip-path: polygon(
+		var(--left-t) 0,
+		100% 0,
+		100% var(--right-t),
+		var(--right-b) 100%,
+		0 100%,
+		0 var(--left-b)
+	);
+}
+
+/* Media query para el corte de las cards */
+@media (min-width: 576px) {
+	.card {
+		--long: 10vw;
+	}
+}
+@media (min-width: 1200px) {
+	.card {
+		--long: 5vw;
+	}
+}
+
+/* GRADIENTE A TITULO */
+.gradient {
+	background: #8300ff;
+	background: linear-gradient(to right, #8300ff 0%, #db00ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
